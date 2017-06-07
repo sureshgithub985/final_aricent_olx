@@ -1,6 +1,7 @@
 import React from 'react';
 import superagent from 'superagent';
 
+
 class ProductRegistration extends React.Component{
   constructor(){
     super();
@@ -73,18 +74,13 @@ getProductById(inputId){
 
   render(){
     return(
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{{ this.state.product.image}}" alt="..." class="image-responsive">
-          <div class="caption">
-             <h3>{{ this.state.product.title }}</h3>
-            <p class="description"> {{ this.state.product.description }}</p>
-            <div class="clearfix">
-              <div class="price pull-left">{{ this.state.product.name }}</div>
-              <a href="/add-to-cart/{{this._id}}" class="btn btn-success pull-right" role="button">Add to Cart</a></div>
+      <div className="container">
+        <ul>
+        <li>suresh</li>
+        <li>maram</li>
+        <li>ok</li>
+        </ul>
             </div>
-          </div>
-      </div>
     );
   }
 }

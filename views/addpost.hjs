@@ -33,11 +33,11 @@
                              </div>
                          </div>
                           <div class="col-xs-12">
-                         <div class="col-xs-6 col-md-3">
+                         <div class="col-xs-6 col-md-4">
                                    <div class="form-group">
                                       <label for="image-upload" id="image-label">Upload Photo</label>
-                                     <a href="javascript:void(0);" class="thumbnail">
-                                   <img src="http://placehold.it/200" id="uploadedImage" class="img-responsive" alt="Bootstap thumbnail" name="image">
+                                     <a href="#" class="thumbnail">
+                                   <img src="#" id="uploadedImage" class="img-responsive" alt="Bootstap thumbnail" name="image">
                                  </a>
                                  <input type="file" name="image"  accept="image/*" style="display: none;">
                              </div>
@@ -62,7 +62,6 @@
                                </div>
                              </div>
                          <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
          </form>
        </div>
      </div>

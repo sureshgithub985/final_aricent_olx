@@ -1,14 +1,13 @@
 import React from 'react';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
 
 class Header extends React.Component{
 
-  render(){
+render(){
     return(
-    <div>
-    <span className="navbar-react">
-    <a href="/addpost" name="Submit a Free Ad">Submit Free Ad</a>
-    </span>
-    </div>
+    <h1>hello</h1>
     );
   }
 }

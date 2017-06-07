@@ -12,7 +12,6 @@ module.exports = {
         callback(err, null);
         return;
       }
-      console.log('products are ... suresh '+products)
       callback(null, products);
       console.log("ProductController: getAllProduct(-): PRODUCT retrieved successfuly!!");
     });

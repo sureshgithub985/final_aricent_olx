@@ -15,6 +15,7 @@ var resource = req.params.resource;
       });
       return;
     }
+    //console.log('In the routes elements are...'+results);
     res.json({
       confirmation: 'Success',
       results: results
