@@ -10,5 +10,9 @@ router.get('/addpost', function(req, res, next) {
   res.render('addpost', { title: 'Aricent Olx App' });
 });
 
+router.get('/get', function(req, res, next) {
+  res.render('get', { title: 'Aricent Olx App' });
+});
+
 
 module.exports = router;

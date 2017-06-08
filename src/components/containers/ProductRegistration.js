@@ -104,11 +104,6 @@ getProductById(inputId){
   render(){
     return(
       <div className="container">
-        <ul>
-        <li>suresh</li>
-        <li>maram</li>
-        <li>ok</li>
-        </ul>
             </div>
     );
   }
