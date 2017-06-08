@@ -17,29 +17,57 @@ class ProductRegistration extends React.Component{
         city: ''
       },
       products:[
-      ]
+      ],
+      blankProduct: {
+        titlr:'',
+        category: '',
+        description: '',
+        image: '',
+        name: '',
+        phone_number: '',
+        city: ''
+      },
+     blankProducts:[]
     }
 
   }
 
 //life cycle method
 componentDidMount(){
-  console.log("ProductRegistration:componentDidMount()");
-  superagent
-  .get('/api/product')
-  .query(null)
-  .set('Accept', 'application/json')
-  .end((err, response)=>{
-    if(err){
-      alert('Error while getting Product from DB ERROR : '+err);
-      return;
-    }
-    console.log(JSON.stringify(response.body));
+    console.log("EmployeeRegistration:componentDidMount()");
+    this.getAllProduct();
+  }
+
+  getAllEmployee(){
+    console.log("ProductRegistration:getAllproduct()");
+    superagent
+    .get('/api/product')
+    .query(null)
+    .set('Accept', 'application/json')
+    .end((err, response)=>{
+      if(err){
+        alert('Error while getting product from DB ERROR : '+err);
+        return;
+      }
+      console.log("coming in the react js application...");
+      console.log(JSON.stringify(response.body));
+      this.setState({
+       products:response.body.results
+      })
+    });
+  }
+
+  updatedProduct(event){
+    console.log("ProductRegistration:updatedProduct(-) for field: "+event.target.name);
+    //create a copy
+    let updatedProduct = Object.assign({}, this.state.product);
+    //update value
+    updatedProduct[event.target.name] = event.target.value;
+    //reassign the state
     this.setState({
-      products:response.body.results
+      product: updatedProduct
     })
-  });
-}
+  }
 
 submitProduct(event){
   console.log("ProductRegistration:submitProduct updatedProduct = "+JSON.stringify(this.state.product));
@@ -62,6 +90,7 @@ submitProduct(event){
      })
    });
 }
+
 getProductById(inputId){
   let productList = Object.assign([], this.state.products);
   let productById = this.state.products.map((product)=>{
